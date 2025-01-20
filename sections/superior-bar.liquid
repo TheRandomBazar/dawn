@@ -39,7 +39,8 @@
       </div>
     {%- elsif section.blocks.size > 1 -%}
       <marquee
-        class="grid grid--1-col slider slider--everywhere"
+        class="grid grid--1-col"
+        id="Slider-{{ section.id }}"
         direction="{{ section.settings.direction }}"
         behavior="scroll"
         scrollamount="{{ section.settings.change_slides_speed }}"
@@ -48,6 +49,12 @@
         {{- section.settings.auto_rotate -}}
         " data-speed="{{ section.settings.change_slides_speed }}"
         {{ section.settings.direction }}
+
+        id="Slide-{{ section.id }}-{{ forloop.index }}"
+        {{ block.shopify_attributes }}
+        role="group" aria-roledescription="{{ 'sections.superiors.superior' | t }}" aria-label="{{ forloop.index }}
+        {{ 'general.slider.of' | t }}
+        {{ forloop.length }}" tabindex="-1"
 
         {%- for block in section.blocks -%}
           <div
@@ -136,11 +143,36 @@
         {
           "value": "up",
           "label": "Up"
+        },
+        {
+          "value": "down",
+          "label": "Down"
         }
       ],
       "default": "left",
       "label": "Scroll direction",
       "info": "The scrolling direction of the text"
+    },
+    {
+      "type": "select",
+      "id": "behaviour",
+      "options": [
+        {
+          "value": "scroll",
+          "label": "scroll"
+        },
+        {
+          "value": "slide",
+          "label": "slide"
+        },
+        {
+          "value": "alternate",
+          "label": "alternate"
+        }
+      ],
+      "default": "scroll",
+      "label": "Scroll behaviour",
+      "info": "Sets how the text is scrolled within the marquee."
     },
     {
       "type": "header",
