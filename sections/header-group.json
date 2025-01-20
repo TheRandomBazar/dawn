@@ -42,12 +42,13 @@
         "superior_WKhAAe"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
-        "show_line_separator": true,
-        "direction": "left",
-        "behaviour": "scroll",
-        "auto_rotate": true,
-        "change_slides_speed": 5
+        "enable_led_effect": true,
+        "text_color": "#ff0000",
+        "text_font": "Courier New",
+        "text_size": 39,
+        "direction": "right",
+        "behaviour": "slide",
+        "change_slides_speed": 9
       }
     },
     "header": {
