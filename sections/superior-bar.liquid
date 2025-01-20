@@ -9,100 +9,64 @@
 
 <div
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% endif %}"
-  {{ block.shopify_attributes }}
 >
   <div class="page-width utility-bar__grid">
-    {%- if section.blocks.size == 1 -%}
-      <div
-        class="superior-bar"
-        role="region"
-        aria-label="{{ 'sections.header.superior' | t }}"
-        {{ block.shopify_attributes }}
-      >
-        {%- if section.blocks.first.settings.text != blank -%}
-          {%- if section.blocks.first.settings.link != blank -%}
-            <a
-              href="{{ section.blocks.first.settings.link }}"
-              class="superior-bar__link link link--text focus-inset animate-arrow"
-            >
-          {%- endif -%}
-          <p class="superior-bar__message h5">
-            <span>{{ section.blocks.first.settings.text | escape }}</span>
-            {%- if section.blocks.first.settings.link != blank -%}
-              {{- 'icon-arrow.svg' | inline_asset_content -}}
-            {%- endif -%}
-          </p>
-          {%- if section.blocks.first.settings.link != blank -%}
-            </a>
-          {%- endif -%}
-        {%- endif -%}
-      </div>
+    Blocks = {{ section.blocks.size }}
+    {% assign min = 1 %}
+    {% assign max = section.blocks.size %}
+    {% assign diff = max | minus: min %}
+    {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
+    Random = {{ randomNumber }}
+    auto_rotate="
+    {{- section.settings.auto_rotate -}}
+    " id="Message-{{ section.id }}-{{ forloop.index }}" shopify_attributes= aria-roledescription="
+    {{- 'sections.superiors.superior' | t -}}
+    " aria-label="
 
-    {%- elsif section.blocks.size > 1 -%}
+    slider of = {{ 'general.slider.of' | t }}
+
+    tabindex="-1"
+
+    {%- for block in section.blocks -%}
+      length {{ forloop.length }} index
+      {{- forloop.index }}
+
       <marquee
         class="grid grid--1-col"
         id="Slider-{{ section.id }}"
         direction="{{ section.settings.direction }}"
         behavior="scroll"
         scrollamount="{{ section.settings.change_slides_speed }}"
+        {{ block.shopify_attributes }}
       >
-        Blocks = {{ section.blocks.size }}
-        {% assign min = 1 %}
-        {% assign max = section.blocks.size %}
-        {% assign diff = max | minus: min %}
-        {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
-        Random = {{ randomNumber }}
-        auto_rotate="
-        {{- section.settings.auto_rotate -}}
-        " id="Message-{{ section.id }}-{{ forloop.index }}" shopify_attributes=
-        {{ block.shopify_attributes }} aria-roledescription="{{ 'sections.superiors.superior' | t }}" aria-label="
-        {{- forloop.index }}
-
-        slider of = {{ 'general.slider.of' | t }}
-
-        {{ forloop.length }}" tabindex="-1"
-
-        {%- for block in section.blocks -%}
-          <div
-            class="grid__item grid--1-col"
-            id="Message-{{ section.id }}-{{ forloop.index }}"
-            {{ block.shopify_attributes }}
-            role="group"
-            aria-roledescription="{{ 'sections.superiors.superior' | t }}"
-            aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-            tabindex="-1"
-          >
-            {%- if block.settings.text != blank -%}
-              {%- if block.settings.link != blank -%}
-                <a
-                  href="{{ block.settings.link }}"
-                  class="superior-bar__link link link--text focus-inset animate-arrow"
-                >
-              {%- endif -%}
-              <p class="superior-bar__message h5">
-                <span>{{ block.settings.text | escape }}</span>
-                {%- if block.settings.link != blank -%}
-                  &nbsp;
-                  {{- 'icon-arrow.svg' | inline_asset_content -}}
-                {%- endif -%}
-              </p>
-              {%- if block.settings.link != blank -%}
-                </a>
-              {%- endif -%}
+        {%- if section.blocks.settings.text != blank -%}
+          {%- if section.blocks.settings.link != blank -%}
+            <a
+              href="{{ section.blocks.settings.link }}"
+              class="superior-bar__link link link--text focus-inset animate-arrow"
+            >
+          {%- endif -%}
+          <p class="superior-bar__message h5">
+            <span>{{ section.blocks.settings.text | escape }}</span>
+            {%- if section.blocks.settings.link != blank -%}
+              {{- 'icon-arrow.svg' | inline_asset_content -}}
             {%- endif -%}
-          </div>
-        {%- endfor -%}
+          </p>
+          {%- if section.blocks.settings.link != blank -%}
+            </a>
+          {%- endif -%}
+        {%- endif -%}
       </marquee>
+    {%- endfor -%}
 
-      {%- if request.design_mode -%}
-        <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
-        <style>
-          /* theme editor power preview fix */
-          .superior-bar-slider .slider__slide[aria-hidden='true'] {
-            visibility: hidden;
-          }
-        </style>
-      {%- endif -%}
+    {%- if request.design_mode -%}
+      <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
+      <style>
+        /* theme editor power preview fix */
+        .superior-bar-slider .slider__slide[aria-hidden='true'] {
+          visibility: hidden;
+        }
+      </style>
     {%- endif -%}
   </div>
 </div>
