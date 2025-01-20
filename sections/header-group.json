@@ -44,7 +44,7 @@
       "settings": {
         "enable_led_effect": true,
         "text_color": "#ff0000",
-        "text_font": "Courier New",
+        "text_font": "Electrolize",
         "text_size": 24,
         "direction": "right",
         "behaviour": "slide",
