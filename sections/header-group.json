@@ -21,13 +21,6 @@
             "link": ""
           }
         },
-        "superior_phT4mp": {
-          "type": "superior",
-          "settings": {
-            "text": "{{ shop.metaobjects.marquee[\"marquee-56khagsk\"].texto | metafield_text }}",
-            "link": ""
-          }
-        },
         "superior_8jN7jC": {
           "type": "superior",
           "settings": {
@@ -45,7 +38,6 @@
       },
       "block_order": [
         "superior_McfHxx",
-        "superior_phT4mp",
         "superior_8jN7jC",
         "superior_WKhAAe"
       ],
