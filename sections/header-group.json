@@ -17,43 +17,59 @@
         "superior_d64WEU": {
           "type": "superior",
           "settings": {
+            "text": "0- Life is better with a friend -Snoopy",
+            "link": ""
+          }
+        },
+        "superior_jx8Ex6": {
+          "type": "superior",
+          "settings": {
+            "text": "1 Life is better with a friend -Snoopy",
+            "link": ""
+          }
+        },
+        "superior_KnzmBc": {
+          "type": "superior",
+          "settings": {
+            "text": "2 -Life is better with a friend -Snoopy",
+            "link": ""
+          }
+        },
+        "superior_eYTxmf": {
+          "type": "superior",
+          "settings": {
+            "text": "3- Life is better with a friend -Snoopy",
+            "link": ""
+          }
+        },
+        "superior_m9iWmy": {
+          "type": "superior",
+          "settings": {
             "text": "Life is better with a friend -Snoopy",
             "link": ""
           }
-        }
-      },
-      "block_order": [
-        "superior_d64WEU"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5
-      }
-    },
-    "announcement-bar": {
-      "type": "announcement-bar",
-      "blocks": {
-        "announcement-bar-0": {
-          "type": "announcement",
+        },
+        "superior_McfHxx": {
+          "type": "superior",
           "settings": {
-            "text": "Welcome to our store",
+            "text": "I hurt myself today To see if I still feelI focus on the pain The only thing that's real The needle tears a hole The old familiar sting Try to kill it all away But I remember everything What have I become? My sweetest friend Everyone I know goes awayIn the end And you could have it all My empire of dirtI will let you downI will make you hurt I wear this crown of thorns Upon my liar's chairFull of broken thoughts I cannot repair Beneath the stains of timeThe feelings disappear You are someone else I'm still right here What have I become? My sweetest friend Everyone I know goes awayIn the end And you could have it all My empire of dirt I will let you down I will make you hurt If I could start again A million miles away I would keep myself I would find a way",
             "link": ""
           }
         }
       },
       "block_order": [
-        "announcement-bar-0"
+        "superior_d64WEU",
+        "superior_jx8Ex6",
+        "superior_KnzmBc",
+        "superior_eYTxmf",
+        "superior_m9iWmy",
+        "superior_McfHxx"
       ],
       "settings": {
-        "color_scheme": "",
+        "color_scheme": "scheme-4",
         "show_line_separator": true,
-        "show_social": false,
         "auto_rotate": false,
-        "change_slides_speed": 5,
-        "enable_country_selector": false,
-        "enable_language_selector": false
+        "change_slides_speed": 5
       }
     },
     "header": {
@@ -78,7 +94,6 @@
   },
   "order": [
     "superior_bar_R7Y8M6",
-    "announcement-bar",
     "header"
   ]
 }
