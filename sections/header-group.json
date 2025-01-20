@@ -34,12 +34,20 @@
             "text": "Life is better with a friend -Snoopy",
             "link": ""
           }
+        },
+        "superior_WKhAAe": {
+          "type": "superior",
+          "settings": {
+            "text": "When truth gets buried deep Beneath a thousand years of sleep Time demands a turn-around And once again the truth is found",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "superior_McfHxx",
         "superior_phT4mp",
-        "superior_8jN7jC"
+        "superior_8jN7jC",
+        "superior_WKhAAe"
       ],
       "settings": {
         "color_scheme": "scheme-4",
