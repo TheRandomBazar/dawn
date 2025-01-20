@@ -17,6 +17,20 @@
     {% assign diff = max | minus: min %}
     {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
     Random = {{ randomNumber }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
+    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
+    Random = {{ randomNumberTwo }}
     auto_rotate="
     {{- section.settings.auto_rotate -}}
     " id="Message-{{ section.id }}-{{ forloop.index }}" shopify_attributes= aria-roledescription="
