@@ -68,8 +68,8 @@
       "settings": {
         "color_scheme": "scheme-4",
         "show_line_separator": true,
-        "direction": "up",
-        "behaviour": "slide",
+        "direction": "left",
+        "behaviour": "scroll",
         "auto_rotate": true,
         "change_slides_speed": 5
       }
