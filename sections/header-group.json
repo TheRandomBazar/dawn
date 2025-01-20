@@ -21,49 +21,25 @@
             "link": ""
           }
         },
-        "superior_jx8Ex6": {
+        "superior_8jN7jC": {
           "type": "superior",
           "settings": {
-            "text": "1 Life is better with a friend -Snoopy",
-            "link": "https://litio.net/"
-          }
-        },
-        "superior_d64WEU": {
-          "type": "superior",
-          "settings": {
-            "text": "0- Life is better with a friend -Snoopy",
+            "text": "Life is better with a friend -Snoopy",
             "link": ""
           }
         },
-        "superior_KnzmBc": {
+        "superior_WKhAAe": {
           "type": "superior",
           "settings": {
-            "text": "2 -Life is better with a friend -Snoopy",
-            "link": ""
-          }
-        },
-        "superior_eYTxmf": {
-          "type": "superior",
-          "settings": {
-            "text": "3- Life is better with a friend -Snoopy",
-            "link": ""
-          }
-        },
-        "superior_phT4mp": {
-          "type": "superior",
-          "settings": {
-            "text": "{{ shop.metaobjects.marquee[\"marquee-56khagsk\"].texto | metafield_text }}",
+            "text": "When truth gets buried deep Beneath a thousand years of sleep Time demands a turn-around And once again the truth is found",
             "link": ""
           }
         }
       },
       "block_order": [
         "superior_McfHxx",
-        "superior_jx8Ex6",
-        "superior_d64WEU",
-        "superior_KnzmBc",
-        "superior_eYTxmf",
-        "superior_phT4mp"
+        "superior_8jN7jC",
+        "superior_WKhAAe"
       ],
       "settings": {
         "color_scheme": "scheme-4",
