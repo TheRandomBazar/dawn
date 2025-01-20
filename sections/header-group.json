@@ -42,11 +42,12 @@
         "superior_WKhAAe"
       ],
       "settings": {
-        "color_scheme": "scheme-4",
-        "show_line_separator": true,
-        "direction": "left",
-        "behaviour": "scroll",
-        "auto_rotate": true,
+        "enable_led_effect": true,
+        "text_color": "#ff0000",
+        "text_font": "Press Start 2P",
+        "text_size": 24,
+        "direction": "right",
+        "behaviour": "slide",
         "change_slides_speed": 5
       }
     },
