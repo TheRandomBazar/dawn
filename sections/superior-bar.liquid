@@ -13,7 +13,7 @@
   <div class="page-width utility-bar__grid">
     Blocks = {{ section.blocks.size }}
     {% assign min = 1 %}
-    {% assign max = section.blocks.size %}
+    {% assign max = section.blocks.size | plus: 1 %}
     {% assign diff = max | minus: min %}
     {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
     Random = {{ randomNumber }}
