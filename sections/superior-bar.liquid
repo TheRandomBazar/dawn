@@ -38,82 +38,49 @@
         {%- endif -%}
       </div>
     {%- elsif section.blocks.size > 1 -%}
-      <slideshow-component
-        class="superior-bar"
-        role="region"
-        aria-roledescription="{{ 'sections.superiors.carousel' | t }}"
-        aria-label="{{ 'sections.superiors.superior_bar' | t }}"
-      >
-        <div class="superior-bar-slider slider-buttons">
-          <button
-            type="button"
-            class="slider-button slider-button--prev"
-            name="previous"
-            aria-label="{{ 'sections.superiors.previous_superior' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
+      <marquee class="grid grid--1-col slider slider--everywhere" direction="left" behavior="scroll" scrollamount="12">
+        id="Slider-{{ section.id }}" aria-live="polite" aria-atomic="true" data-autoplay="
+        {{- section.settings.auto_rotate -}}
+        " data-speed="{{ section.settings.change_slides_speed }}"
+
+        {%- for block in section.blocks -%}
           <div
-            class="grid grid--1-col slider slider--everywhere"
-            id="Slider-{{ section.id }}"
-            aria-live="polite"
-            aria-atomic="true"
-            data-autoplay="{{ section.settings.auto_rotate }}"
-            data-speed="{{ section.settings.change_slides_speed }}"
+            class="slideshow__slide slider__slide grid__item grid--1-col"
+            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            {{ block.shopify_attributes }}
+            role="group"
+            aria-roledescription="{{ 'sections.superiors.superior' | t }}"
+            aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
+            tabindex="-1"
           >
-            {%- for block in section.blocks -%}
-              <div
-                class="slideshow__slide slider__slide grid__item grid--1-col"
-                id="Slide-{{ section.id }}-{{ forloop.index }}"
-                {{ block.shopify_attributes }}
-                role="group"
-                aria-roledescription="{{ 'sections.superiors.superior' | t }}"
-                aria-label="{{ forloop.index }} {{ 'general.slider.of' | t }} {{ forloop.length }}"
-                tabindex="-1"
-              >
-                <div
-                  class="superior-bar__superior"
-                  role="region"
-                  aria-label="{{ 'sections.header.superior' | t }}"
-                  {{ block.shopify_attributes }}
-                >
-                  {%- if block.settings.text != blank -%}
-                    {%- if block.settings.link != blank -%}
-                      <a
-                        href="{{ block.settings.link }}"
-                        class="superior-bar__link link link--text focus-inset animate-arrow"
-                      >
-                    {%- endif -%}
-                    <p class="superior-bar__message h5">
-                      <span>{{ block.settings.text | escape }}</span>
-                      {%- if block.settings.link != blank -%}
-                        {{- 'icon-arrow.svg' | inline_asset_content -}}
-                      {%- endif -%}
-                    </p>
-                    {%- if block.settings.link != blank -%}
-                      </a>
-                    {%- endif -%}
+            <div
+              class="superior-bar__superior"
+              role="region"
+              aria-label="{{ 'sections.header.superior' | t }}"
+              {{ block.shopify_attributes }}
+            >
+              {%- if block.settings.text != blank -%}
+                {%- if block.settings.link != blank -%}
+                  <a
+                    href="{{ block.settings.link }}"
+                    class="superior-bar__link link link--text focus-inset animate-arrow"
+                  >
+                {%- endif -%}
+                <p class="superior-bar__message h5">
+                  <span>{{ block.settings.text | escape }}</span>
+                  {%- if block.settings.link != blank -%}
+                    {{- 'icon-arrow.svg' | inline_asset_content -}}
                   {%- endif -%}
-                </div>
-              </div>
-            {%- endfor -%}
+                </p>
+                {%- if block.settings.link != blank -%}
+                  </a>
+                {%- endif -%}
+              {%- endif -%}
+            </div>
           </div>
-          <button
-            type="button"
-            class="slider-button slider-button--next"
-            name="next"
-            aria-label="{{ 'sections.superiors.next_superior' | t }}"
-            aria-controls="Slider-{{ section.id }}"
-          >
-            <span class="svg-wrapper">
-              {{- 'icon-caret.svg' | inline_asset_content -}}
-            </span>
-          </button>
-        </div>
-      </slideshow-component>
+        {%- endfor -%}
+      </marquee>
+
       {%- if request.design_mode -%}
         <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
         <style>
