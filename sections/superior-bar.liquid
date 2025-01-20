@@ -48,7 +48,7 @@
       >
         auto_rotate="
         {{- section.settings.auto_rotate -}}
-        " id="Slide-{{ section.id }}-{{ forloop.index }}" shopify_attributes=
+        " id="Message-{{ section.id }}-{{ forloop.index }}" shopify_attributes=
         {{ block.shopify_attributes }} aria-roledescription="{{ 'sections.superiors.superior' | t }}" aria-label="
         {{- forloop.index }}
 
@@ -58,8 +58,8 @@
 
         {%- for block in section.blocks -%}
           <div
-            class="slideshow__slide slider__slide grid__item grid--1-col"
-            id="Slide-{{ section.id }}-{{ forloop.index }}"
+            class="grid__item grid--1-col"
+            id="Message-{{ section.id }}-{{ forloop.index }}"
             {{ block.shopify_attributes }}
             role="group"
             aria-roledescription="{{ 'sections.superiors.superior' | t }}"
