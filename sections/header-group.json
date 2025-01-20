@@ -11,6 +11,27 @@
   "name": "t:sections.header.name",
   "type": "header",
   "sections": {
+    "superior_bar_R7Y8M6": {
+      "type": "superior-bar",
+      "blocks": {
+        "superior_d64WEU": {
+          "type": "superior",
+          "settings": {
+            "text": "Life is better with a friend -Snoopy",
+            "link": ""
+          }
+        }
+      },
+      "block_order": [
+        "superior_d64WEU"
+      ],
+      "settings": {
+        "color_scheme": "",
+        "show_line_separator": true,
+        "auto_rotate": false,
+        "change_slides_speed": 5
+      }
+    },
     "announcement-bar": {
       "type": "announcement-bar",
       "blocks": {
@@ -52,27 +73,6 @@
         "margin_bottom": 0,
         "padding_top": 20,
         "padding_bottom": 20
-      }
-    },
-    "superior_bar_R7Y8M6": {
-      "type": "superior-bar",
-      "blocks": {
-        "superior_d64WEU": {
-          "type": "superior",
-          "settings": {
-            "text": "missing translation: \"t:sections.superior-bar.blocks.superior.settings.text.default\"",
-            "link": ""
-          }
-        }
-      },
-      "block_order": [
-        "superior_d64WEU"
-      ],
-      "settings": {
-        "color_scheme": "",
-        "show_line_separator": true,
-        "auto_rotate": false,
-        "change_slides_speed": 5
       }
     }
   },
