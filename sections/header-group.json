@@ -21,34 +21,6 @@
             "link": ""
           }
         },
-        "superior_jx8Ex6": {
-          "type": "superior",
-          "settings": {
-            "text": "1 Life is better with a friend -Snoopy",
-            "link": "https://litio.net/"
-          }
-        },
-        "superior_d64WEU": {
-          "type": "superior",
-          "settings": {
-            "text": "0- Life is better with a friend -Snoopy",
-            "link": ""
-          }
-        },
-        "superior_KnzmBc": {
-          "type": "superior",
-          "settings": {
-            "text": "2 -Life is better with a friend -Snoopy",
-            "link": ""
-          }
-        },
-        "superior_eYTxmf": {
-          "type": "superior",
-          "settings": {
-            "text": "3- Life is better with a friend -Snoopy",
-            "link": ""
-          }
-        },
         "superior_phT4mp": {
           "type": "superior",
           "settings": {
@@ -59,10 +31,6 @@
       },
       "block_order": [
         "superior_McfHxx",
-        "superior_jx8Ex6",
-        "superior_d64WEU",
-        "superior_KnzmBc",
-        "superior_eYTxmf",
         "superior_phT4mp"
       ],
       "settings": {
