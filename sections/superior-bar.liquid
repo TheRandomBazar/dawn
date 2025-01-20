@@ -16,7 +16,7 @@
       {% if randomNumber == forloop.index %}
         <marquee
           class="grid grid--1-col"
-          id="Slider-{{ section.id }}"
+          id="Message-{{ section.id }}"
           direction="{{ section.settings.direction }}"
           behavior="scroll"
           scrollamount="{{ section.settings.change_slides_speed }}"
@@ -45,12 +45,6 @@
 
     {%- if request.design_mode -%}
       <script src="{{ 'theme-editor.js' | asset_url }}" defer="defer"></script>
-      <style>
-        /* theme editor power preview fix */
-        .superior-bar-slider .slider__slide[aria-hidden='true'] {
-          visibility: hidden;
-        }
-      </style>
     {%- endif -%}
   </div>
 </div>
