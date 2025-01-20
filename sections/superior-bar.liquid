@@ -17,34 +17,12 @@
     {% assign diff = max | minus: min %}
     {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
     Random = {{ randomNumber }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    {% assign randomNumberTwo = 'now' | date: '%N' | modulo: diff %}
-    Random = {{ randomNumberTwo }}
-    auto_rotate="
-    {{- section.settings.auto_rotate -}}
-    " id="Message-{{ section.id }}-{{ forloop.index }}" shopify_attributes= aria-roledescription="
-
-    " aria-label="
-
-    slider of = {{ 'general.slider.of' | t }}
-
-    tabindex="-1"
 
     {%- for block in section.blocks -%}
-      length {{ forloop.length }}
-      index
       {{- forloop.index }}
+      {% if randomNumber == forloop.index %}
+        YESSS equal!! Random = {{ randomNumber }} Index = {{ forloop.index }}
+      {% endif %}
 
       <marquee
         class="grid grid--1-col"
