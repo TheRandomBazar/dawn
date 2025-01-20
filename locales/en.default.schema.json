@@ -521,7 +521,7 @@
       }
     },
     "superior-bar": {
-      "name": "Announcement bar",
+      "name": "Superior bar",
       "settings": {
         "auto_rotate": {
           "label": "Auto-rotate messages"
@@ -555,12 +555,12 @@
         }
       },
       "blocks": {
-        "Message": {
+        "message": {
           "name": "Message",
           "settings": {
             "text": {
               "label": "Text",
-              "default": "Welcome to our store"
+              "default": "Life is better with a friend -Snoopy"
             },
             "text_alignment": {
               "label": "Text alignment",
