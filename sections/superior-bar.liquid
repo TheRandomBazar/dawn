@@ -1,6 +1,3 @@
-{{ 'component-slideshow.css' | asset_url | stylesheet_tag }}
-{{ 'component-slider.css' | asset_url | stylesheet_tag }}
-
 {%- liquid
   if section.blocks.size > 0
     assign superior_bar = true
@@ -11,14 +8,11 @@
   class="utility-bar color-{{ section.settings.color_scheme }} gradient{% if section.settings.show_line_separator and section.blocks.size > 0 %} utility-bar--bottom-border{% endif %}"
 >
   <div class="page-width utility-bar__grid">
-    Blocks = {{ section.blocks.size }}
     {% assign min = 1 %}
     {% assign max = section.blocks.size | plus: 1 %}
     {% assign diff = max | minus: min %}
     {% assign randomNumber = 'now' | date: '%N' | modulo: diff | plus: min %}
-
     {%- for block in section.blocks -%}
-      {{- forloop.index }}
       {% if randomNumber == forloop.index %}
         <marquee
           class="grid grid--1-col"
