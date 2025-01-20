@@ -505,6 +505,30 @@
               "label": "Link"
             }
           }
+        },
+        "superior": {
+          "name": "Announcement 2",
+          "settings": {
+            "text": {
+              "label": "Text",
+              "default": "Welcome to our store"
+            },
+            "text_alignment": {
+              "label": "Text alignment",
+              "options__1": {
+                "label": "Left"
+              },
+              "options__2": {
+                "label": "Center"
+              },
+              "options__3": {
+                "label": "Right"
+              }
+            },
+            "link": {
+              "label": "Link"
+            }
+          }
         }
       },
       "presets": {
