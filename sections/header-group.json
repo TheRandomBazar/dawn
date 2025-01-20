@@ -27,11 +27,19 @@
             "text": "{{ shop.metaobjects.marquee[\"marquee-56khagsk\"].texto | metafield_text }}",
             "link": ""
           }
+        },
+        "superior_8jN7jC": {
+          "type": "superior",
+          "settings": {
+            "text": "Life is better with a friend -Snoopy",
+            "link": ""
+          }
         }
       },
       "block_order": [
         "superior_McfHxx",
-        "superior_phT4mp"
+        "superior_phT4mp",
+        "superior_8jN7jC"
       ],
       "settings": {
         "color_scheme": "scheme-4",
