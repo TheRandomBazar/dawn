@@ -11,38 +11,32 @@
   "name": "t:sections.footer.name",
   "type": "footer",
   "sections": {
-    "newsletter_iHfbx8": {
-      "type": "newsletter",
+    "1738968279aabfee63": {
+      "type": "apps",
       "blocks": {
-        "heading_kQTpcP": {
-          "type": "heading",
+        "forms_inline_VmLBC4": {
+          "type": "shopify://apps/forms/blocks/inline/8744a304-fcb1-4347-b211-bb6b4759a76a",
           "settings": {
-            "heading": "Te lo contamos todo",
-            "heading_size": "h2"
+            "form_id": "338582",
+            "text_color": "#202020",
+            "button_background_color": "#202020",
+            "button_label_color": "#FFFFFF",
+            "links_color": "#1878B9",
+            "errors_color": "#E02229",
+            "text_alignment": "center",
+            "form_alignment": "center",
+            "padding_top": 0,
+            "padding_bottom": 0,
+            "padding_right": 0,
+            "padding_left": 0
           }
-        },
-        "paragraph_qLcX79": {
-          "type": "paragraph",
-          "settings": {
-            "text": ""
-          }
-        },
-        "email_form_X8dU8y": {
-          "type": "email_form",
-          "settings": {}
         }
       },
       "block_order": [
-        "heading_kQTpcP",
-        "paragraph_qLcX79",
-        "email_form_X8dU8y"
+        "forms_inline_VmLBC4"
       ],
-      "custom_css": [],
       "settings": {
-        "color_scheme": "",
-        "full_width": true,
-        "padding_top": 100,
-        "padding_bottom": 0
+        "include_margins": true
       }
     },
     "footer": {
@@ -76,7 +70,7 @@
     }
   },
   "order": [
-    "newsletter_iHfbx8",
+    "1738968279aabfee63",
     "footer"
   ]
 }
