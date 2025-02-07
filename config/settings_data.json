@@ -9,7 +9,7 @@
  */
 {
   "current": {
-    "logo": "shopify://shop_images/TRB.png",
+    "logo": "shopify://shop_images/TRB_-_Logo.png",
     "logo_width": 300,
     "type_header_font": "assistant_n4",
     "heading_scale": 100,
@@ -399,7 +399,7 @@
   },
   "platform_customizations": {
     "custom_css": [
-      ".footer {border-bottom: none; border-top:0;}",
+      ".footer {border-bottom: none; border-top: 0;}",
       ".footer__content-bottom {border-top: 0; padding-top: 0;}",
       ".footer__content-top {padding-bottom: 0;}"
     ]
