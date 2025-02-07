@@ -400,7 +400,8 @@
   "platform_customizations": {
     "custom_css": [
       ".footer {border-bottom: none;}",
-      ".footer__content-bottom {border-top: none;}"
+      ".footer__content-bottom {border-top: 0; padding-top: 0;}",
+      ".footer__content-top {padding-bottom: 0;}"
     ]
   }
 }
