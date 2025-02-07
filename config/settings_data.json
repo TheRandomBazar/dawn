@@ -396,5 +396,11 @@
         }
       }
     }
+  },
+  "platform_customizations": {
+    "custom_css": [
+      ".footer {border-bottom: none;}",
+      ".footer__content-bottom {border-top: none;}"
+    ]
   }
 }
