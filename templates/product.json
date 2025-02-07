@@ -70,7 +70,7 @@
           "settings": {
             "heading": "Shipping & Returns",
             "icon": "truck",
-            "content": "",
+            "content": "<p>{{ localization.market.metafields.store.shipping | metafield_tag }}</p>",
             "page": ""
           }
         },
