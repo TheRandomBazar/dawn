@@ -37,6 +37,9 @@
         "paragraph_qLcX79",
         "email_form_X8dU8y"
       ],
+      "custom_css": [
+        ".footer{border-top:none;}"
+      ],
       "settings": {
         "color_scheme": "",
         "full_width": true,
